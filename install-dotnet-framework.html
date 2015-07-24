@@ -20,7 +20,9 @@
     <img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" />
     Install the .NET Framework</h1>
 
-<p>You need to install the .NET Framework to run many apps on Windows. The best versions to install are the .NET Framework 4.6 and the <a href="http://go.microsoft.com/fwlink/?LinkId=330819">.NET Framework 3.5 SP1</a>. Those two versions should run nearly all .NET apps.</p>
+<p>You need to install the .NET Framework to run many apps on Windows. The best versions to install is the <a href="http://go.microsoft.com/fwlink/?LinkId=528259">.NET Framework 4.6</a>. Some apps may required <a href="http://go.microsoft.com/fwlink/?LinkId=330819">.NET Framework 3.5 SP1</a>. Those two versions should run nearly all .NET apps.</p>
+
+<p>The following .NET versions are available.</p>
 
 <div class="col-sm-4">
 <ul id="versions" class="list-group"></ul>
@@ -40,7 +42,7 @@ div {font-size: 12pt;}
 document.title = "Install .NET Framework Versions";
 $(document).ready(function() {
     var data;
-    var json = "https://dotnetweb.blob.core.windows.net/platforms/platforms.json";
+    var json = "platforms.json";
     $.support.cors = true;
     $.getJSON( json, function( d ) {    
 
