@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Foo site</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!--
+ __   __                       _           _   _ _____ _____ 
+ \ \ / /__  _   _    __ _  ___| |_ ___    | \ | | ____|_   _|
+  \ V / _ \| | | |  / _` |/ _ \ __/ __|   |  \| |  _|   | |  
+   | | (_) | |_| | | (_| |  __/ |_\__ \  _| |\  | |___  | |  
+   |_|\___/ \__,_|  \__, |\___|\__|___/ (_)_| \_|_____| |_|  
+                    |___/                                     
+-->
+
+<h1><img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg"/> Targeting .NET Platforms: Desktop, Server, Cloud and Devices</h1>
+
+<p class="lead">You can build apps for many platforms and services by downloading .NET Framework targeting packs and SDKs and using them with Visual Studio. Check out the <a href="http://blogs.msdn.com/b/dotnet">.NET Framework blog</a> for information on new releases.</p>
+
+<p class="lead">The downloads available differ by Visual Studio version. Pick your Visual Studio version by using the buttons below.</p>
+
+<div id="navigation" class="navigation"> 
+</div>
+
+<div id="platforms">
+</div>
+
+<p class="lead">Note: These SDK and .NET Framework downloads may update Visual Studio and the .NET Framework on your machine.</p>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+<style>
+td:first-child {width: 40%;}
+h1 {padding-top: 10px;}
+td p {font-size: 16px; margin-bottom:2px;}
+th p {font-size: 16px; margin:0px; font-weight: bold;}
+</style>    
+<script>
+document.title = ".NET SDKs and Targeting Packs";
+$(document).ready(function() {
+    var data;
+    //var json = "https://dotnetweb.blob.core.windows.net/platforms/platforms.json";
+    var json ="platforms.json";
+    $.support.cors = true;
+    $.getJSON( json, function( d ) {    
+
+        data = d;
+        generateButtons();
+        initPage("VS2015");
+    });
+
+    function initPage(vs)
+    {
+        $("#platforms").empty();
+
+        $.each(data.platformcategories,function(key,val)
+        {
+            $("#platforms").append("<h2>"+ val.name+"</h2>")
+            generateTable(val.alias, vs,data);
+        });
+    }
+
+    function generateButtons()
+    {
+
+         $.each(data.vsversions,function(key,val)
+        {
+            $("#navigation").append("<a id="+ val.alias+" class='btn btn-lg btn-default' href=# role=button>"+val.name +"</a>");
+            $("#" + val.alias).click(function()
+            {
+                changeButtonStatus(val.alias);
+                initPage(val.alias)
+            });
+        });
+        $("#" + data.vsversions[data.vsversions.length-1].alias).removeClass("btn-default").addClass("btn-success");
+    }
+
+    function changeButtonStatus(mode)
+    {
+        var modes = ["VS2010","VS2012","VS2013","VS2015"];
+
+        for (var i = 0; i < modes.length;i++)
+        {
+            var id = "#" + modes[i];
+            if (modes[i] == mode && $(id).hasClass("btn-default"))
+            {
+                $(id).removeClass("btn-default").addClass("btn-success");   
+            }
+            else if (modes[i] != mode && $(id).hasClass("btn-success"))
+            {
+                $(id).removeClass("btn-success").addClass("btn-default");
+            }
+        }
+    }
+
+    function generateTable(category, vs, data )
+    {
+        $("#platforms").append("<table class=table table-striped id="+ category +"><thead id="+ category +"_thead><tr><th><p>Platform</p></th><th><p>Downloads</p></th></tr></thead><tbody id="+ category +"_tbody></tbody></table>");
+        var tbody = "#" + category + "_tbody"
+        $.each(data.platforms,function(key,val)
+        {
+            if (category != val.category)
+            {
+                return;
+            }
+
+            if (!((val.includedIn && $.inArray(vs,val.includedIn) >= 0) || (val.supportedBy && $.inArray(vs,val.supportedBy) >=0 )))
+            {
+                return;
+            }
+
+            var row = generateRow(val, vs);
+            $(tbody).append("<tr><td><p><a href=" +val.info+">"+val.platform+"</a></p></td><td>"+ row +"</td></tr>");
+        });
+    }
+
+    function generateRow(platform, vs)
+    {
+        var tools = "";
+        if (platform.includedIn && $.inArray(vs,platform.includedIn) >= 0)
+        {
+            var vs_version;
+            for(i = 0; i < data.vsversions.length;i++)
+            {
+                if (data.vsversions[i].alias == vs)
+                {
+                    vs_version = data.vsversions[i];
+                    break;
+                }
+            }
+
+            tools += "<p>Included in <a href="+ vs_version.download + ">"+ vs_version.name + "</a></p>";
+        }
+
+        var generateText = function(downloads, descName)
+        {
+            descName = descName == null ? "": descName;            
+            if (downloads && downloads.length > 0)
+            {
+                for (var i = 0; i < downloads.length; i++)
+                {
+                    var title = downloads[i].description ? " title=\x22" + downloads[i].description +"\x22": "";
+                    tools += "<p><a" + title +" href=" +downloads[i].link + ">" +downloads[i].name+ " " +descName +"</a></p>";
+                }
+            }
+        };
+
+        generateText(platform.tools);
+        generateText(platform.runtime, "Runtime");
+
+        return tools;
+    }
+
+});
+</script>
+</body>
+</html>
