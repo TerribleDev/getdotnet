@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Microsoft .NET Framework NuGet Packages</title>
+</head>
+<body>
+<h1>Microsoft .NET Framework NuGet Packages</h1>
+    <p>Historically, the .NET Framework product was the one place to get libraries built by the .NET team. In recent years, the team has been using <a href="http://blogs.msdn.com/b/dotnet/archive/2013/10/16/nuget-is-a-net-framework-release-vehicle.aspx">NuGet as a .NET Framework release vehicle</a>, to release features and fixes available more quickly, often in response to feedback. NuGet is now one of the primary vehicles that we use to release libraries, as NuGet packages. We want to make sure that you know about these packages and always have easy access to them using Visual Studio or the other NuGet clients. That's why we've made a <a href="https://www.nuget.org/api/v2/curated-feeds/microsoftdotnet/">.NET NuGet package feed</a> (OData) available that includes these packages, and published it as HTML here.</p>
+    <p>NuGet is a huge repository. If you're looking for packages built by the Microsoft .NET Framework team, then this is your list.</p>
+
+
+
+
+
+    <style>
+        table.package_table td {vertical-align:top;border-bottom:1px solid #DDD;line-height:18px;text-align:left;padding-bottom:2px; padding-right: 5px}
+        tr.title_row td {font-weight: bold; border: none}
+        table.package_table td.name {width: 200px;}
+        td.gravatar {width: 40px}
+        td.gravatar img {height:32px; width:32px;}
+    </style>
+
+        <h2>Stable Packages</h2>
+<p>The following packages are marked as stable, which is the NuGet equivalent of an RTM release.</p>
+    <table class="package_table" id="stable_package_table">
+        <tr class="title_row">
+            <td class="gravatar"></td>
+            <td class="name">Name</td>
+            <td>Downloads</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+    <h2>Pre-release Packages</h2>
+<p>Pre-release packages are released to preview functionality and to gather feedback. Generally, we don’t guarantee that the functionality between pre-releases remains the same nor that the APIs are compatible as we may decide to update the package based on your feedback. The best way to reach us is by using the NuGet contact page for the package on which you’d like to give us feedback.</p>
+    <table class="package_table" id="prerelease_package_table">
+        <tr class="title_row">
+            <td class="gravatar"></td>
+            <td class="name">Name</td>
+            <td>Downloads</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+    <h2>Microsoft Supported 3rd Party Libraries</h2>
+<p>The following packages are 3rd party libraries we depend on. They are supported in the context of a dependency, i.e. the exact version any of the packages above depend on.</p>
+    <table class="package_table" id="thirdparty_package_table">
+        <tr class="title_row">
+            <td class="gravatar"></td>
+            <td class="name">Name</td>
+            <td>Downloads</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+<script type = "text/javascript";
+    src = "http://dotnetsocialweb.azurewebsites.net/js/nugetfeed.min.js">
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65565245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
