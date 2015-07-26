@@ -35,19 +35,6 @@ namespace GetDotnet.Controllers
 					select version.Target;
         }
 		
-
-		public FrameworkVersion GetVersion44WithPolicy(string inputVersion, string os = "7")
-		{
-			
-			var version = (from v in s_frameworkVersions
-										where v.Target == inputVersion || (v.Aliases!=null &&  v.Aliases.Contains(inputVersion))
-										select v).First();
-						
-						
-			
-		 	return version;	
-		}
-		
 		[HttpGet]
 		public FrameworkVersion GetVersionWithPolicy(string inputVersion, string OS = "7")
 		{
