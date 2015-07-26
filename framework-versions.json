@@ -1,0 +1,108 @@
+{
+	"frameworkVersions" : 
+		[
+		{
+			"target" : ".NETFramework,Version=v4.6",
+			"version" : "4.6",
+			"info":"http://blogs.msdn.com/b/dotnet/archive/2015/07/20/announcing-net-framework-4-6.aspx",
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=528259",
+			"webInstaller" : "http://go.microsoft.com/fwlink/?LinkId=528222",
+			"offlineInstaller" : "http://go.microsoft.com/fwlink/?LinkId=528232",
+			"targetingPack" : "http://go.microsoft.com/fwlink/?LinkId=528261",
+			"languagePack" : "https://support.microsoft.com/en-us/kb/3045556"
+		},
+		{
+			"target" : ".NETFramework,Version=v4.5.2",
+			"info":"http://blogs.msdn.com/b/dotnet/archive/2014/05/05/announcing-the-net-framework-4-5-2-release.aspx",
+			"version" : "4.5.2",
+			"preferVersion" : "4.6",
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=397674",
+			"webInstaller" : "http://go.microsoft.com/fwlink/?LinkId=397674",
+			"offlineInstaller" : "http://go.microsoft.com/fwlink/?LinkId=328856",
+			"targetingPack" : "http://go.microsoft.com/fwlink/?LinkId=328857",
+			"languagePack" : "http://go.microsoft.com/fwlink/?LinkId=328858"
+		},			
+		{
+			"target" : ".NETFramework,Version=v4.5.1",
+			"version" : "4.5.1",
+			"preferVersion" : "4.6",
+			"info" : "http://blogs.msdn.com/b/dotnet/archive/2013/10/17/net-framework-4-5-1-rtm-gt-start-coding.aspx",			
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=308918"
+		},		
+		{
+			"target" : ".NETFramework,Version=v4.5",
+			"version" : "4.5",
+			"preferVersion" : "4.6",
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=229538"
+		},
+		{
+			"target" : ".NETFramework,Version=v4.0.3",
+			"aliases" : [".NETFramework,Version=v4.0.3,Profile=Client"],
+			"version" : "4.0.3",
+			"preferVersion" : "4.6",
+			"download" : "http://go.microsoft.com/fwlink/?LinkID=229541"
+		},
+		{
+			"target" : ".NETFramework,Version=v4.0.2",
+			"aliases" : [".NETFramework,Version=v4.0.2,Profile=Client"],
+			"version" : "4.0.2",
+			"preferVersion" : "4.6",
+			"download" : "http://go.microsoft.com/fwlink/?LinkID=229539"
+		},
+		{
+			"target" : ".NETFramework,Version=v4.0.1",
+			"aliases" : [".NETFramework,Version=v4.0.1,Profile=Client"],
+			"version" : "4.0.1",
+			"preferVersion" : "4.6",
+			"download" : "http://go.microsoft.com/fwlink/?LinkID=213996"
+		},
+		{
+			"target" : ".NETFramework,Version=v4.0",
+			"aliases": ["v4.0", "v4.0.30319",".NETFramework,Version=v4.0,Profile=Client"],
+			"version" : "4",
+			"preferVersion" : "4.6",			
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=213834"
+		},
+		{
+			"target" : "3.5",
+			"aliases" : ["Client"],
+			"version" : "3.5",
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=213828",
+			"webInstaller" : "http://download.microsoft.com/download/2/0/E/20E90413-712F-438C-988E-FDAA79A8AC3D/dotnetfx35.exe"
+		},
+		{
+			"target" : "v2.0.50727",
+			"version" : "2",
+			"preferVersion" : "3.5",			
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=213823"
+		},			
+		{
+			"target" : "v1.1.4322",
+			"version" : "1.1",
+			"preferVersion" : "3.5",			
+			"download" : "http://go.microsoft.com/fwlink/?LinkID=213810"
+		},
+		{
+			"target" : "v1.0.3705",
+			"version" : "1",
+			"preferVersion" : "3.5",			
+			"download" : "http://go.microsoft.com/fwlink/?LinkId=214025"
+		}
+		],
+	"help" :
+	[
+		{
+			"name" : "dotnet-45-xp",
+			"info" : "http://getdotnet.azurewebsites.net/help/dotnet45-xp.html"
+		},
+				{
+			"name" : "dotnet-4-xp",
+			"info" : "http://getdotnet.azurewebsites.net/help/dotnet4-xp.html"
+		},
+		{
+			"name" : "dotnet-versions",
+			"info" : "http://getdotnet.azurewebsites.net/install-dotnet.html"
+		}
+
+	]
+}
