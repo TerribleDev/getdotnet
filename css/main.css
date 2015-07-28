@@ -1,0 +1,44 @@
+/* Import statements here ...*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700);
+
+body {
+    font-family: 'Open Sans';
+    margin: 0px 20px;
+}
+
+h1, h2 h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed';
+}
+
+/* Adding some whitespace */
+p {
+    margin-bottom: 12px;
+}
+#platforms > h2 {
+    font-family: 'Roboto Condensed';
+}
+#platforms > table {
+    font-family: 'Open Sans';
+}
+
+/* Links */
+a {
+    color: #682079;
+}
+a:hover {
+    color: #682079;
+    text-decoration: underline;
+}
+
+.btn-gs:hover, .btn-gs:active, .btn-gs:focus, .jquery-active {
+  color: #fff;
+  background-color: #682079;
+}
+.btn-gs-active {
+    color: #fff;
+    background-color: #682079;
+}
+
+
+

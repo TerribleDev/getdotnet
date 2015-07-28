@@ -2,6 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Targeting .NET Platforms</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +33,6 @@
 <p class="lead">Note: These SDK and .NET Framework downloads may update Visual Studio and the .NET Framework on your machine.</p>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
 <style>
 td:first-child {width: 40%;}
 h1 {padding-top: 10px;}
@@ -64,17 +65,18 @@ $(document).ready(function() {
 
     function generateButtons()
     {
+        $("#navigation").append("<div class='btn-group'>");
 
          $.each(data.vsversions,function(key,val)
         {
-            $("#navigation").append("<a id="+ val.alias+" class='btn btn-lg btn-default' href=# role=button>"+val.name +"</a>");
+            $("#navigation > .btn-group").append("<a id="+ val.alias+" class='btn btn-gs btn-lg btn-default' href=# role=button>"+val.name +"</a>");
             $("#" + val.alias).click(function()
             {
                 changeButtonStatus(val.alias);
                 initPage(val.alias)
             });
         });
-        $("#" + data.vsversions[data.vsversions.length-1].alias).removeClass("btn-default").addClass("btn-success");
+        $("#" + data.vsversions[data.vsversions.length-1].alias).removeClass("btn-default").addClass("btn-gs-active");
     }
 
     function changeButtonStatus(mode)
@@ -86,11 +88,11 @@ $(document).ready(function() {
             var id = "#" + modes[i];
             if (modes[i] == mode && $(id).hasClass("btn-default"))
             {
-                $(id).removeClass("btn-default").addClass("btn-success");   
+                $(id).removeClass("btn-default").addClass("btn-gs-active");   
             }
-            else if (modes[i] != mode && $(id).hasClass("btn-success"))
+            else if (modes[i] != mode && $(id).hasClass("btn-gs-active"))
             {
-                $(id).removeClass("btn-success").addClass("btn-default");
+                $(id).removeClass("btn-gs-active").addClass("btn-default");
             }
         }
     }
