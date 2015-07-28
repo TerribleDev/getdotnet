@@ -8,44 +8,41 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css" />
     <!--
- __   __                       _           _   _ _____ _____ 
+ __   __                       _           _   _ _____ _____
  \ \ / /__  _   _    __ _  ___| |_ ___    | \ | | ____|_   _|
-  \ V / _ \| | | |  / _` |/ _ \ __/ __|   |  \| |  _|   | |  
-   | | (_) | |_| | | (_| |  __/ |_\__ \  _| |\  | |___  | |  
-   |_|\___/ \__,_|  \__, |\___|\__|___/ (_)_| \_|_____| |_|  
-                    |___/                                     
+  \ V / _ \| | | |  / _` |/ _ \ __/ __|   |  \| |  _|   | |
+   | | (_) | |_| | | (_| |  __/ |_\__ \  _| |\  | |___  | |
+   |_|\___/ \__,_|  \__, |\___|\__|___/ (_)_| \_|_____| |_|
+                    |___/
 -->
 </head>
 <body>
-
-<h1>
-    <img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" />
-    Install the .NET Framework</h1>
-
-<p>You need to install the .NET Framework to run many apps on Windows. The best versions to install is the <a href="http://go.microsoft.com/fwlink/?LinkId=528259">.NET Framework 4.6</a>. Some apps may required <a href="http://go.microsoft.com/fwlink/?LinkId=330819">.NET Framework 3.5 SP1</a>. Those two versions should run nearly all .NET apps.</p>
-
-<p>The following .NET versions are available.</p>
-
-<div class="col-sm-4">
-<ul id="versions" class="list-group"></ul>
+<div class="row">
+  <div class="col-md-12">
+    <h1><img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" /> Install the .NET Framework</h1>
+    <p class="lead">You need to install the .NET Framework to run many apps on Windows. The best versions to install is the <a href="http://go.microsoft.com/fwlink/?LinkId=528259">.NET Framework 4.6</a>. Some apps may required <a href="http://go.microsoft.com/fwlink/?LinkId=330819">.NET Framework 3.5 SP1</a>. Those two versions should run nearly all .NET apps.</p>
+  </div>
 </div>
-<div class="row"></div>
-
-<p>Developers may want to check out <a href="target-dotnet-platforms.html">Targeting Dotnet Platforms</a> and <a href="targeting-dotnet-versions.html">Targeting .NET Framework Versions</a> to learn more about targeting .NET Framework versions.</p>
+<div class="row">
+  <div class="col-md-12">
+      <h2>Available .NET Versions</h2>
+      <ul id="versions" class="list-group"></ul>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p class="lead">Developers may want to check out <a href="target-dotnet-platforms.html">Targeting Dotnet Platforms</a> and <a href="targeting-dotnet-versions.html">Targeting .NET Framework Versions</a> to learn more about targeting .NET Framework versions.</p>
+  </div>
+</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<style>
-li {font-size: 14pt;}
-div {font-size: 12pt;}
-</style>    
 <script>
 document.title = "Install .NET Framework Versions";
 $(document).ready(function() {
     var data;
     var json = "platforms.json";
     $.support.cors = true;
-    $.getJSON( json, function( d ) {    
+    $.getJSON( json, function( d ) {
 
         data = d;
 
