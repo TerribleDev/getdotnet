@@ -91,4 +91,24 @@ a:hover {
     margin-bottom: 35px;
 }
 
+/* Install button tiles */
+.install-tile {
+    width: 150px;
+    height: 150px;
+    background-color: #682079;
+    /* add drop shadow here */
+    display: inline-block;
+    padding: 15px;
+    margin-right: 25px; 
+    color: #fff;
+    font-family: 'Roboto Condensed';
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+.install-tile:hover {
+    background-color: #932DAB;
+    color: #fff;
+    text-decoration: none;
+}
+
 
