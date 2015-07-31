@@ -1,40 +1,68 @@
 <html>
 
 <head>
-<title>.NET Framework Initialization Error</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../css/main.css" />
+  <title>.NET Framework Initialization Error</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
-<div>
+  <div class="nav-menu nav-menu-collapsed" id="navigationMenu">
+      <div class="nav-menu-header">
+          <img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" />
+      </div>
+      <div class="nav-menu-content">
+          <ul>
+              <li><a href="../install-dotnet.html">Install .NET</a></li>
+              <li><a href="../target-dotnet-platforms.html">Target .NET Framework</a></li>
+              <li><a href="../dotnet-user-groups.html">.NET User Group meetings</a></li>
+              <li><a href="dotnet-docs.html">.NET Docs</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="sub-menu">
+                <a href="#" id="menuControl"><span class="fa fa-bars"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
 
-    <h1><img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" style="vertical-align:middle"/> .NET Framework Initialization Error</h1>
+        <h1>.NET Framework Initialization Error</h1>
+
+        <p>Every .NET app targets a particular .NET version. This is either the target version of the app project, which is automatically recorded with the app, or a version that is manually updated later. When an app is launched, the .NET runtime checks to see if this version is installed on a given machine before running an app. If that version is not installed, you will see an error message similar to the one shown in the image below.</p>
+
+        <p><img style="border: 0px currentcolor; margin-right: auto; margin-left: auto; float: none; display: block; background-image: none;" border="0" src="dotnet-framework-initialization-error.png" width="415" height="196" /></p>
+
+        <p>You should validate that the correct version is installed. The <a href="../install-dotnet.html">Installing the .NET Framework </a> page lists all of versions of the .NET Framework that you an install. You can also look at the <a href="http://go.microsoft.com/fwlink/?LinkID=229561">.NET SDKs and Targeting Packs</a> page to find the runtime version you need.</p>
+
+        <p>You may also want to troubleshoot why you are seeing this error. The .NET team has provided the following resources to help you:</p>
+
+      <ul>
+        <li><a href="http://msdn.microsoft.com/library/jj157063(v=vs.110).aspx">.NET Framework Initialization Errors: Managing the User Experience</a></li>
+
+        <li><a href="http://msdn.microsoft.com/library/jj152929(v=vs.110).aspx">How to: Debug CLR Activation Issues</a></li>
+
+        <li><a href="http://blogs.msdn.com/b/dotnet/archive/2013/06/27/get-the-latest-net-bits.aspx">.Get the latest .NET bits</a></li>
+
+        <li><a href="http://blogs.msdn.com/b/dotnet/p/dotnet45xp.aspx">.NET Framework 4.5 and Windows XP</a></li>
+
+      <li><a href="http://blogs.msdn.com/b/dotnet/p/dotnet4xp.aspx">Installing the .NET Framework 4 on Windows XP</a></li>
+        <li><a href="http://blogs.msdn.com/b/dotnet/">.NET Team Blog</a></li>
+
+      </ul>
+      <p>You can <a href="mailto:dotnethelp@microsoft.com?subject=Having trouble targeting .NET">contact Microsoft</a> for help if you cannot correctly target the .NET Framework.</p>
+
+    </div>
+  </div>
+  </div>
 </div>
-
-<p>Every .NET app targets a particular .NET version. This is either the target version of the app project, which is automatically recorded with the app, or a version that is manually updated later. When an app is launched, the .NET runtime checks to see if this version is installed on a given machine before running an app. If that version is not installed, you will see an error message similar to the one shown in the image below.</p>
-
-<p><img style="border: 0px currentcolor; margin-right: auto; margin-left: auto; float: none; display: block; background-image: none;" border="0" src="dotnet-framework-initialization-error.png" width="415" height="196" /></p>
-
-<p>You should validate that the correct version is installed. The <a href="../install-dotnet.html">Installing the .NET Framework </a> page lists all of versions of the .NET Framework that you an install. You can also look at the <a href="http://go.microsoft.com/fwlink/?LinkID=229561">.NET SDKs and Targeting Packs</a> page to find the runtime version you need.</p>
-
-<p>You may also want to troubleshoot why you are seeing this error. The .NET team has provided the following resources to help you:</p>
-
-<ul>
-  <li><a href="http://msdn.microsoft.com/library/jj157063(v=vs.110).aspx">.NET Framework Initialization Errors: Managing the User Experience</a></li>
-
-  <li><a href="http://msdn.microsoft.com/library/jj152929(v=vs.110).aspx">How to: Debug CLR Activation Issues</a></li>
-
-  <li><a href="http://blogs.msdn.com/b/dotnet/archive/2013/06/27/get-the-latest-net-bits.aspx">.Get the latest .NET bits</a></li>
-
-  <li><a href="http://blogs.msdn.com/b/dotnet/p/dotnet45xp.aspx">.NET Framework 4.5 and Windows XP</a></li>
-
-<li><a href="http://blogs.msdn.com/b/dotnet/p/dotnet4xp.aspx">Installing the .NET Framework 4 on Windows XP</a></li>
-  <li><a href="http://blogs.msdn.com/b/dotnet/">.NET Team Blog</a></li>
-
-</ul>
-<p>You can <a href="mailto:dotnethelp@microsoft.com?subject=Having trouble targeting .NET">contact Microsoft</a> for help if you cannot correctly target the .NET Framework.</p>
-
-</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../js/main.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
