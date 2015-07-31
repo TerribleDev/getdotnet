@@ -4,6 +4,7 @@
     <title>Targeting .NET Platforms</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,22 +18,49 @@
 -->
 </head>
 <body>
+    <div class="nav-menu nav-menu-collapsed" id="navigationMenu">
+        <div class="nav-menu-header">
+            <img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg" /> 
+        </div>
+        <div class="nav-menu-content">
+            <ul>
+                <li><a href="install-dotnet.html">Install .NET</a></li>
+                <li><a href="target-dotnet-platforms.html">Target .NET Framework</a></li>
+                <li class="active"><a href="dotnet-user-groups.html">.NET User Group meetings</a></li>
+                <li><a href="help/dotnet-docs.html">.NET Docs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sub-menu">    
+                    <a href="#" id="menuControl"><span class="fa fa-bars"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Targeting .NET Platforms</h1>
 
-<h1><img src="http://i.microsoft.com/net/images/chrome/net-logo.jpg"/> Targeting .NET Platforms</h1>
+                <p class="lead">You can build apps for many platforms and services by downloading .NET Framework targeting packs and SDKs and using them with Visual Studio. Check out the <a href="http://blogs.msdn.com/b/dotnet/archive/tags/announcement/">.NET Framework blog</a> for information on new releases.</p>
 
-<p class="lead">You can build apps for many platforms and services by downloading .NET Framework targeting packs and SDKs and using them with Visual Studio. Check out the <a href="http://blogs.msdn.com/b/dotnet/archive/tags/announcement/">.NET Framework blog</a> for information on new releases.</p>
+                <p class="lead">The downloads available differ by Visual Studio version. Pick your Visual Studio version by using the buttons below.</p>
 
-<p class="lead">The downloads available differ by Visual Studio version. Pick your Visual Studio version by using the buttons below.</p>
+                <div id="navigation" class="navigation"> 
+                </div>
 
-<div id="navigation" class="navigation"> 
-</div>
+                <div id="platforms">
+                </div>
 
-<div id="platforms">
-</div>
+                <p class="lead">Note: These SDK and .NET Framework downloads may update Visual Studio and the .NET Framework on your machine.</p>
+            </div>
+        </div>
+    </div>
 
-<p class="lead">Note: These SDK and .NET Framework downloads may update Visual Studio and the .NET Framework on your machine.</p>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/main.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <style>
 td:first-child {width: 40%;}
 h1 {padding-top: 10px;}

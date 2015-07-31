@@ -111,4 +111,73 @@ a:hover {
     text-decoration: none;
 }
 
+/* Menu stuff */
+.sub-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sub-menu > a {
+    padding: 5px;
+    color: #ccc;
+}
+.sub-menu > a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.main-content-slide {
+    position: relative;
+    left: 205px;
+}
+.nav-menu-header {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.nav-menu-header > img {
+    /*box-shadow: 0 0 3px 3px rgba(0,0,0,0.5);*/
+    border: 2px solid #000;
+}
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    border-right: 1px solid #ccc;
+    /*padding-right: 10px;*/
+    /*background-color: #eee;*/
+    background-color: #682079;
+}
+.nav-menu-collapsed {
+    display: none;
+}
+.nav-menu-expanded {
+    width: 200px;
+    height: 100%;
+    z-index: 100;
+    display: block;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.5);
+}
+.nav-menu-content > ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+ }
+
+ .nav-menu-content > ul > li > a {
+     display: inline-block;
+     padding: 20px 15px;
+     width: 100%;
+     /*border-bottom: 1px solid #aaa;*/
+    font-family: 'Roboto Condensed';
+    font-size: 15px;
+    color: #fff;
+    text-transform: lowercase;
+ }
+.nav-menu-content > ul > li >  a:hover {
+    background-color: #932DAB;
+    width: 100%;
+    text-decoration: none;
+}
+
 
