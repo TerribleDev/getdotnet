@@ -4,6 +4,8 @@
 
 $(document).ready(function () {
 
+    var meetupCount = 10;
+    var showMeetupSource = false;
     var cmLogo =  "http://dotnetsocialweb.azurewebsites.net/assets/cm_logo.png";
     var mLogo = "http://dotnetsocialweb.azurewebsites.net/assets/meetup_logo.png";
     var dLogo = "http://dotnetsocialweb.azurewebsites.net/assets/net_logo.png"
