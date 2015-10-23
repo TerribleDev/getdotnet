@@ -56,7 +56,7 @@ p.lead {
     font-family: 'Open Sans';
 }
 
-.ug-badge { 
+.ug-badge {
     width: 50px;
 }
 /* Links */
@@ -102,7 +102,7 @@ a:hover {
     /* add drop shadow here */
     display: inline-block;
     padding: 15px;
-    margin-right: 25px; 
+    margin-right: 25px;
     color: #fff;
     font-family: 'Roboto Condensed';
     /*font-weight: bold;*/
@@ -125,7 +125,10 @@ a:hover {
 }
 .sub-menu > a:hover {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
+}
+#menuControl{
+  background-color: #68227b
 }
 .main-content-slide {
     position: relative;
@@ -182,5 +185,3 @@ a:hover {
     width: 100%;
     text-decoration: none;
 }
-
-
